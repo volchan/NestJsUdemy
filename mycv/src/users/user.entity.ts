@@ -1,3 +1,4 @@
+import { Logger } from '@nestjs/common';
 import {
   AfterInsert,
   AfterRemove,
@@ -28,16 +29,16 @@ export class User {
 
   @AfterInsert()
   logInsert() {
-    console.log('Inserted User with id', this.id);
+    Logger.log(`Inserted User with id ${this.id}`, this.constructor.name);
   }
 
   @AfterUpdate()
   logUpdate() {
-    console.log('Updated User with id', this.id);
+    Logger.log(`Updated User with id ${this.id}`, this.constructor.name);
   }
 
   @AfterRemove()
   logRemove() {
-    console.log('Removed User with id', this.id);
+    Logger.log(`Removed User with id ${this.id}`, this.constructor.name);
   }
 }

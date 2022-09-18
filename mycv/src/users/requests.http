@@ -15,7 +15,7 @@ Content-Type: application/json
 GET http://localhost:3000/auth?email=toto%2B1%40gmail.com
 Content-Type: application/json
 
-### Finds all User with a given email
+### Updates a User
 PATCH http://localhost:3000/auth/0b1f1bcd-68c8-4a5e-8bc0-2b65de5753b5
 Content-Type: application/json
 
@@ -24,6 +24,6 @@ Content-Type: application/json
 }
 
 
-### Finds all User with a given email
+### Deletes a User
 DELETE http://localhost:3000/auth/aef9e7fc-e3ec-4d5a-adc0-f4201ce893f3
 Content-Type: application/json
